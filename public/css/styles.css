@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+}
+h1 {
+  font-weight: 600;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2rem;
+  margin-top: 3vh;
+  letter-spacing: 0;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5vh;
+}
+#formFile {
+  width: 30%;
+}
+h5 {
+  margin-top: 4vh;
+}
+
+h6 {
+  margin-top: 5vh;
+}
+
+#ownername {
+  width: 40%;
+  padding: 3px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1vh;
+}
+
+#submit {
+  margin-right: 8px;
+}
+
+#alert {
+  margin-top: 3vh;
+  text-align: center;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+#transaction-list {
+  font-size: 1rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.transaction {
+  font-size: 1rem;
+  margin-top: 2.5vh;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  #formFile {
+    width: 70%;
+  }
+
+  #ownername {
+    width: 80%;
+  }
+
+  #transaction-list {
+    width: 100%;
+  }
+  .transaction {
+    font-size: 0.5rem;
+  }
+}
