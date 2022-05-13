@@ -2,7 +2,7 @@ const BigPromise = require("../utils/BigPromise");
 const Web3 = require("web3");
 const { Ownershipcontract, contractAddress } = require("../utils/contract");
 
-const web3 = new Web3("HTTP://127.0.0.1:7545");
+const web3 = new Web3(process.env.HTTP_ADDRESS);
 
 //Get the list of accounts on the node
 exports.getAccounts = BigPromise(async function (req, res, next) {
@@ -15,8 +15,7 @@ exports.getAccounts = BigPromise(async function (req, res, next) {
 
 //store the file hash on the Blockchain.
 exports.addFile = BigPromise(async function (req, res, next) {
-  const pvtKey =
-    "be4d54f3058accb0cfe0889efba3d7d4bdb36cdcd0cfcbebd06db89c695c6e22";
+  const pvtKey = process.env.PVT_KEY;
 
   const owner = req.body.owner;
   const fileHash = req.body.fileHash;

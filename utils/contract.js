@@ -1,6 +1,6 @@
 const Web3 = require("web3");
 
-const web3 = new Web3("ws://127.0.0.1:7545");
+const web3 = new Web3(process.env.WS_ADDRESS);
 
 web3.setProvider(new Web3.providers.WebsocketProvider("ws://127.0.0.1:7545"));
 
@@ -81,7 +81,7 @@ const abi = [
   },
 ];
 
-const contractAddress = "0x32b8Bb5DC69075F1a22e5A43576a68483872B450";
+const contractAddress = process.env.CONTRACT_ADDRESS;
 
 const Ownershipcontract = new web3.eth.Contract(abi, contractAddress);
 
